@@ -104,9 +104,17 @@ z-index:500;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    line-height: 1.5;
     unicode-bidi: isolate;
     text-align: justify;
 }
+
+.t1{
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+}
+
 .menu.open {
     left: 0; /* Despliega el menú */
 }

@@ -10,11 +10,13 @@
     margin-top: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
+
 .fotoheaderd {
     max-width: 15%;
     height: auto;
     margin-left: 20px; /* Espacio entre el logo y el texto */
 }
+
 .container {
     margin: 20px 0;
     display: flex;
@@ -35,14 +37,7 @@
     flex-grow: 1; /* Permite que el texto crezca para ocupar el espacio */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-}
+
 .header-h {
     background: url('../imagenes_video/maderawebp.webp');
     padding: 10px;
@@ -50,15 +45,18 @@ body {
     background-size: 10%; /* Asegura que la imagen cubra todo el header */
     z-index:800;
 }
+
 .menu-vertical {
     width: 200px;
     padding: 20px;
 }
+
 .content {
     flex: 1;
     padding: 20px;
     transition: filter 0.3s ease;
 }
+
 footer {
     text-align: center;
     background-color: #EB8931;
@@ -68,9 +66,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 .header-footer{
-z-index:500;
+    z-index:500;
 }
+
 .btn {
     text-align: center;
     margin-top: 10px;
@@ -88,15 +88,20 @@ z-index:500;
     transition:
         scale 0.25s ease-in, 
         opacity 0.25s ease-in, 
-        filter 0.25s ease-in;}
-        .btn:hover{
-        scale: 1.1;}
+        filter 0.25s ease-in;
+}
 
-        .btns:has(.btn:hover) .btn:not(:hover) {
-        scale: 0.8; opacity: 0.8;
-        filter: blur (4px);    }
-        
-.p1{
+.btn:hover {
+    scale: 1.1;
+}
+
+.btns:has(.btn:hover) .btn:not(:hover) {
+    scale: 0.8; 
+    opacity: 0.8;
+    filter: blur(4px);    
+}
+
+.p1 {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: block;
@@ -107,9 +112,11 @@ z-index:500;
     unicode-bidi: isolate;
     text-align: justify;
 }
+
 .menu.open {
     left: 0; /* Despliega el menú */
 }
+
 .menu {
     position: fixed;
     left: -400px; /* Fuera de la pantalla */
@@ -120,6 +127,7 @@ z-index:500;
     transition: left 0.3s ease;
     z-index: 1000; /* Asegúrate de que esté por encima */
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -130,17 +138,28 @@ z-index:500;
     display: none;
     z-index: 900; /* Debajo del menú */
 }
+
 .overlay.active {
     display: block; /* Muestra el filtro */
 }
+
 .menu-item {
     padding: 35px;
     cursor: pointer;
 }
 
-.descripcion-inner  {
-    margin-right: 550px;
-    margin-left: 550px;
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre imágenes */
+    margin-left: 50px; /* Margen izquierdo para centrar las imágenes */
+    margin-right: 0px; /* Sin margen derecho */
+}
+
+.fotocontent {
+    width: 100%; /* Asegura que cada imagen ocupe toda su columna */
+    height: auto;
+    border-radius: 8px; /* Esquinas redondeadas */
 }
 
 .menu {
@@ -154,27 +173,20 @@ z-index:500;
     transition: top 0.3s ease; /* Suaviza el movimiento */
     z-index: 1000; /* Asegúrate de que esté por encima */
 }
-.content {
-    padding: 20px;
-    transition: filter 0.3s ease;
-}
-.fotocontent{
-    max-width: 100%;
-    height: auto;
-    display: grid;
-    place-items: center;
-}
 
-a{
+
+a {
     color: inherit;
     text-decoration: none; 
 }
+
 #menu {
     position: absolute; /* Cambia a absolute para que pueda moverse inicialmente */
     top: 340px; /* Posición inicial */
     transition: top 0.3s ease; /* Agrega una transición suave */
     /* Otros estilos que necesites */
 }
+
 .no-scroll {
     overflow: hidden; /* Desactiva el scroll */
 }
@@ -183,23 +195,24 @@ a{
     text-align: center;
     margin-top: 10px;
     align-items: center;
-    margin-left:0px;
+    margin-left: 0px;
     background-color: #EB8931;
     margin-bottom: 25px; /* Separación de 12px entre botones */
     padding: 10px 20px;
     border-width: 4px;
     cursor: pointer;
-    position:fixed;
+    position: fixed;
     font-family: NunitoXtra, serif;
     font-size: 20px;
     color: var(--color-white);
-    z-index:10001;
+    z-index: 10001;
     transition:
         scale 0.25s ease-in, 
         opacity 0.25s ease-in, 
-        filter 0.25s ease-in;}
+        filter 0.25s ease-in;
+}
 
-.pfooter{
+.pfooter {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: block;
@@ -210,8 +223,6 @@ a{
     unicode-bidi: isolate;
     text-align: center;
 }
-
-
 
 @media (max-width: 600px) {
     h1 {
@@ -232,25 +243,24 @@ a{
         text-align: left;
         flex-grow: 1; /* Esto permite que el texto ocupe el centro */
         font-size: 1.5em;    
-}
-    .fotoheaderd{
+    }
+    .fotoheaderd {
         max-width: 30%;
         height: auto;
         display: grid;
         place-items: center;
-
     }
     .header-h {
         padding: 10px;
         color: white;
         background-size: cover; /* Asegura que la imagen cubra todo el header */
         background-position: center calc(0% - 60px); 
-        z-index:800;
+        z-index: 800;
     }
     #toggleMenu {
-    margin-top:-4em;
-    text-align: center;
-}   
+        margin-top: -4em;
+        text-align: center;
+    }   
 }
 
 @media (max-width: 900px) {
@@ -272,25 +282,25 @@ a{
         text-align: left;
         flex-grow: 1; /* Esto permite que el texto ocupe el centro */
         font-size: 2.5em;    
-}
-    .fotoheaderd{
+    }
+    .fotoheaderd {
         max-width: 30%;
         height: auto;
         display: grid;
         place-items: center;
-
     }
     .header-h {
         padding: 10px;
         color: white;
         background-size: cover; /* Asegura que la imagen cubra todo el header */
         background-position: center calc(0% - 60px); 
-        z-index:800;
+        z-index: 800;
     }
     #toggleMenu {
-    margin-top:-4em;
-    text-align: center;
-}   }
+        margin-top: -4em;
+        text-align: center;
+    }   
+}
 
 @media (max-width: 1900px) {
     h1 {
@@ -311,22 +321,22 @@ a{
         text-align: left;
         flex-grow: 1; /* Esto permite que el texto ocupe el centro */
         font-size: 2.5em;    
-}
-    .fotoheaderd{
+    }
+    .fotoheaderd {
         max-width: 30%;
         height: auto;
         display: grid;
         place-items: center;
-
     }
     .header-h {
         padding: 10px;
         color: white;
         background-size: cover; /* Asegura que la imagen cubra todo el header */
         background-position: center calc(0% - 60px); 
-        z-index:800;
+        z-index: 800;
     }
     #toggleMenu {
-    margin-top:-4em;
-    text-align: center;
-}   }
+        margin-top: -4em;
+        text-align: center;
+    }   
+}
