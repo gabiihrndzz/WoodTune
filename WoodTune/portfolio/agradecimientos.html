@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/agradecimientos.css">
+    <title>Cruzzi Cafu 922</title>
+    <link rel="icon" href="imagenes_video/logo_.webp" type="image/x-icon">
+</head>
+<body>
+    <header class="header-h">
+        <div class="container"> 
+            <h1 class="tituloWoodTune">WoodTune</h1>
+            <img src="imagenes_video/logo_.webp" class="fotoheaderd" alt="Logo" height="200" />
+        </div>
+    </header>
+    
+    <div class="overlay" id="overlay"></div>
+    <div class="menu" id="menu">
+        <a href="../index.html"><div class="btn"><b>INICIO</b></div></a>
+        <a href="../portfolio/fotos.html"><div class="btn">FOTOS</div></a>
+        <a href="../portfolio/nosotros.html"><div class="btn">SOBRE NOSOTROS</div></a>
+        <a href="agradecimientos.html"><div class="btn">AGRADECIMIENOS</div></a>
+        <a href="../portfolio/rrss.html"><div class="btn">REDES SOCIALES</div></a>
+        
+    </div>
+    
+    <div class="content" id="content">
+        <button class="btn1" id="toggleMenu">Abrir Menú</button>
+        <!-- Contenido principal -->
+        <main class="descripcion-inner">
+            <p class="p1">Tras sus dos discos en solitario “Maracucho Bueno Muere Chiquito” y “Moonlight922”, y su EP “Visión Túnel”, Cruz Cafuné abrió una nueva etapa con su álbum “Me Muevo Con Dios”, un disco tan esperado que consiguió hacer sold out en la gira antes de que este viera la luz.</p>
+
+           <p class="p1">El tinerfeño volvía a colocarse en el top de las listas de éxitos con este nuevo trabajo y batía todos los récords siendo un álbum principalmente de rap, aunque abarca otros estilos como el Jersey Club, reggaeton o R&B. Su capacidad para fusionar géneros ha sido uno de los sellos distintivos de su carrera, lo que le ha permitido atraer a una audiencia diversa y expandir su influencia en la música urbana.</p>
+           
+           <p class="p1">Colándose en el top #2 mundial de Spotify, top #1 en Apple Music y alcanzando el 4º mejor debut de un álbum español de la historia de Spotify Spain, es un disco que plasma su identidad bajo el concepto del tiburón. Este concepto no solo se refleja en su música, sino también en su estética visual y en la narrativa que construye a lo largo de sus proyectos. Cruz utiliza el tiburón como símbolo de fuerza y resiliencia, representando su lucha y crecimiento personal en la industria musical.</p>
+           
+           <p class="p1">Ahora, el artista ha sorprendido con un EP inesperado bajo el título “blu€s”, el cual ha nacido en medio de los conciertos de la gira con la intención de crear música por el simple placer de hacerlo. En él, encontramos una gran variedad de estilos, desde sexy drill hasta blues, pasando por el jerk o el dancehall. Esta versatilidad demuestra su habilidad para adaptarse y experimentar con diferentes sonoridades, manteniendo siempre su esencia única.</p>
+           
+           <img src="imagenes_video/madera" class="fotocontent" alt="Foto en Me Muevo Con Dios">
+
+           <p class="p1">Su background cultural canario a medio camino entre África, Europa y América Latina, sus melodías relajadas en contraste a las letras directas y su revisada proposición de música pop, le han convertido en mitad crooner mitad rapero con un ecléctico e interesante cuerpo de trabajo. Esta mezcla de influencias se traduce en letras que abordan temas de identidad, amor y la vida cotidiana, resonando con un público amplio que se siente identificado con su mensaje.</p>
+           
+           <p class="p1">Cruz Cafuné no solo se ha destacado por su música, sino también por su autenticidad y conexión con sus seguidores. A través de las redes sociales, comparte su vida, sus pensamientos y su proceso creativo, creando una comunidad sólida que lo apoya en cada paso de su carrera. Esta relación cercana con su audiencia es fundamental en la era digital, donde la interacción directa puede marcar la diferencia entre un artista y su público.</p>
+           
+           <p class="p1">Además, su compromiso con la cultura canaria y su deseo de llevarla al mundo es evidente en cada uno de sus proyectos. Cruz ha trabajado para visibilizar las raíces y tradiciones de su tierra, incorporando elementos culturales en su música y presentaciones. Este enfoque no solo enriquece su trabajo, sino que también contribuye a la diversidad en la música urbana, ofreciendo una perspectiva fresca y auténtica.</p>
+           
+        </main>
+    </div>
+
+
+    <footer>
+        <header class="header-footer">
+            <h2>Información de Contacto</h2>
+        </header>
+        <p class="pfooter">© 2024 Cruz Cafuné Todos los derechos reservados. Carlos Bruñas Zamorín</p>
+
+    </footer>
+    <script>
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('overlay');
+        const toggleMenu = document.getElementById('toggleMenu');
+        const content = document.getElementById('content');
+        const body = document.body; // Referencia al body
+    
+        toggleMenu.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open');
+            overlay.classList.toggle('active');
+            content.style.filter = isOpen ? 'blur(5px)' : 'none';
+    
+            // Agregar o quitar la clase para desactivar el scroll
+            body.classList.toggle('no-scroll', isOpen);
+    
+            // Verificar si el menú está vacío y aplicar clase
+            if (menu.children.length === 0) {
+                menu.classList.add('blurred');
+            } else {
+                menu.classList.remove('blurred');
+            }
+        });
+    
+        overlay.addEventListener('click', () => {
+            menu.classList.remove('open');
+            overlay.classList.remove('active');
+            content.style.filter = 'none';
+    
+            // Quitar la clase para habilitar el scroll
+            body.classList.remove('no-scroll');
+            menu.classList.remove('blurred'); // Asegúrate de quitar la clase al cerrar
+        });
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+    
+            // Mantener el menú en posición fija
+            menu.style.position = 'fixed'; // Asegura que el menú sea fijo
+            menu.style.top = '0'; // Coloca el menú en la parte superior
+        });
+    
+            const menu1 = document.getElementById('toggleMenu');
+    
+            window.addEventListener('scroll', function() {
+                const scrollPosition1 = window.scrollY;
+    
+                if (scrollPosition1 < 300) {
+                    menu1.style.position = 'absolute'; // Mantener en posición absoluta
+                    menu1.style.top = '300px'; // Posición inicial
+                } else {
+                    menu1.style.position = 'fixed'; // Cambiar a posición fija
+                    menu1.style.top = '0'; // Coloca el menú en la parte superior
+                }
+            });
+            </script>        
+</body>
+</html>
