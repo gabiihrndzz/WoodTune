@@ -51,6 +51,21 @@
     padding: 20px;
 }
 
+.cards {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    overflow-y: auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.cards .card {
+    display: flex; /* Usar flexbox para la tarjeta */
+    align-items: center; /* Centra las imágenes verticalmente */
+    padding: 20px;
+    width: auto; /* Permite que la tarjeta se ajuste al contenido */
+}
+
 .content {
     flex: 1;
     padding: 20px;
