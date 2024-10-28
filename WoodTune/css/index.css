@@ -75,8 +75,8 @@ z-index:500;
     cursor: pointer;
     font-family: NunitoXtra, serif;
     font-size: 20px;
-    border: 2px #5D2B20;
-    color: var(--color-white);
+    border: 2px solid black;
+   color: var(--color-white);
     transition:
         scale 0.25s ease-in, 
         opacity 0.25s ease-in, 
@@ -105,6 +105,7 @@ z-index:500;
 }
 .menu {
     position: fixed;
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede el alto */
     left: -400px; /* Fuera de la pantalla */
     width: 400px;
     height: 100%;
@@ -189,7 +190,37 @@ a{
     height: 450px; /* Mantiene la altura de las imágenes */
     margin: 10px; /* Espacio entre las imágenes */
   }
-  .cards {
+  /* Estilos generales del menú */
+.hmenu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Flecha de la derecha para submenús */
+.hmenu-arrow-next {
+    margin-left: auto;
+    content: '►';
+    color: #555;
+}
+
+/* Contenedor del submenú, oculto por defecto */
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+/* Muestra el submenú cuando tiene la clase 'open' */
+.submenu.open {
+    display: flex;
+}
+
+
+.cards {
     display: flex;
     justify-content: center; /* Centra las tarjetas horizontalmente */
     overflow-y: auto;
